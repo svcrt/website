@@ -16,6 +16,7 @@ body > img {
 	z-index: 1;
 }
 
+/* Adds element to cover part of the image with a gradient */
 body::before {
 	content: "";
 	position: absolute;
@@ -89,6 +90,7 @@ body > span > a {
 	font-size: 1.5vh;
 }
 
+/* When viewed in landscape */
 @media (max-aspect-ratio: 4/3) {
 	body::before {
 		background: #C12626;
