@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<title>CRT Scanner</title>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/quagga/0.12.1/quagga.js" crossorigin="anonymous"></script>
+
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="./style.css">
+	</head>
+	<body>
+		<div id="camContainer">
+			<span id="camHint">Positioneer de barcode horizontaal in het midden van het scherm om hem te scannen</span>
+		</div>
+
+		<div id="result">
+			<em>Studentennummer</em>
+			<span id="resultNum"></span>
+
+			<em>Naam</em>
+			<span id="resultName"></span>
+
+			<i id="resultIcon" class="fa fa-refresh fa-spin fa-3x fa-fw"></i>
+			<strong id="resultText"></strong>
+
+			<button id="resultClose">Sluit</button>
+		</div>
+
+		<script src="./script.js" charset="utf-8"></script>
+	</body>
+</html>
