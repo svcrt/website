@@ -1,0 +1,101 @@
+body {
+	margin: 0;
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+	font-family: Helvetica, sans-serif;
+	color: #FFF;
+	background-color: #C12626;
+}
+
+body > img {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	min-width: 50vw;
+	z-index: 1;
+}
+
+body::before {
+	content: "";
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+	top: 0;
+	left: 0;
+	background-image: linear-gradient(90deg, #C12626 0%, #CD3232 50%, rgba(223,66,66,.4) 100%);
+	z-index: 2;
+}
+
+body > div {
+	position: relative;
+	z-index: 10;
+	width: 50vw;
+	height: 100vh;
+	padding: 10vh 10vw;
+	box-sizing: border-box;
+	flex-direction: column;
+}
+
+body > div > svg {
+	fill: #FFF;
+	height: 14vh;
+	width: 30vh;
+}
+
+body > div > p {
+	font-size: 2vh;
+	line-height: 1.2em;
+	margin: 3vh 0 4vh;
+}
+
+body > div > a {
+	background: #FFF;
+	display: inline-block;
+	color: #C12626;
+	padding: 3vh 2vh 3vh 3vh;
+	cursor: pointer;
+	text-decoration: none;
+	font-size: 1.8vh;
+	transform: scale(1);
+	transition: transform .2s;
+}
+
+body > div > a:hover {
+	transform: scale(1.08);
+}
+
+body > div > a::after {
+	content: "➜";
+	display: inline-block;
+	padding:  0 2vh 0 1vh;
+	transition: padding .2s;
+}
+
+body > div > a:hover::after {
+	padding:  0 1vh 0 2vh;
+}
+
+body > span {
+	display: block;
+	position: absolute;
+	bottom: 10vh;
+	left: 10vw;
+	z-index: 11;
+}
+
+body > span > a {
+	color: inherit;
+	font-size: 1.5vh;
+}
+
+@media (max-aspect-ratio: 4/3) {
+	body::before {
+		background: #C12626;
+	}
+
+	body > div {
+		width: 100vw;
+		max-width: 70vh;
+	}
+}
